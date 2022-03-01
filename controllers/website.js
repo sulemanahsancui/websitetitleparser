@@ -23,7 +23,7 @@ exports.getUrls = async (req, res, next) => {
         res.send(h.html());
       } else {
         res.send(
-          "type url in search bar and parse title of that website like is base url?adsress=name of website"
+          "type url in search bar and parse title of that website like is base url?address=name of website"
         );
       }
     } catch (err) {

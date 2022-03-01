@@ -4,7 +4,7 @@ const error = require("../exceptions/urlError");
 //get webistes url
 exports.getUrls = async (req, res, next) => {
   const url = req.query.address;
-  if (url.toLowerCase().indexOf(".com") === -1)
+  if (url?.toLowerCase().indexOf(".com") === -1)
     return next(new Error("Invalid url"));
   const _url = "https://www." + url;
   async function scrapeData() {

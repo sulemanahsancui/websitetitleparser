@@ -8,7 +8,9 @@ app.use(express.json());
 
 // routes
 app.use("/I/want/title", websitesUrlRoute);
-
+app.use("/", (req, res) => {
+  res.send({ message: "ok" });
+});
 // app.use(error);
 // app.use(errorHandlerMiddleware);
 
